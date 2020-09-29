@@ -171,6 +171,16 @@ nav ul li a:hover {
   }
 }
 
+@media (max-width: 800px) {
+  nav .main-links a {
+    font-size: 1.2rem;
+  }
+
+  .nav .alternate-links li a {
+    font-size: 1.2rem;
+  }
+}
+
 /* footer */
 footer {
   height: 100%;
@@ -345,6 +355,18 @@ footer {
   }
 }
 
+@media (max-width: 680px) {
+  .about-us h1 {
+    font-size: 6rem;
+  }
+  .about-us .about-us-para-big p {
+    font-size: 2.4rem;
+  }
+  .about-us .about-us-para-small p {
+    font-size: 1.8rem;
+  }
+}
+
 /* section carosel */
 
 .carosel {
@@ -433,7 +455,7 @@ footer {
 .learn-more-bottom p {
   font-style: normal;
   font-weight: 300;
-  font-size: 24px;
+  font-size: 2.4rem;
   line-height: 35px;
   color: #e1dff3;
   margin-left: 10%;
@@ -459,6 +481,17 @@ footer {
   .learn-more-top p {
     font-size: 3rem;
     width: 65%;
+  }
+}
+
+@media (max-width: 680px) {
+  .learn-more-top p {
+    font-size: 2.5rem;
+    width: 75%;
+  }
+  .learn-more-bottom p {
+    font-size: 2rem;
+    width: 75%;
   }
 }
 
@@ -621,8 +654,14 @@ footer {
   color: #e6e5f8;
 }
 
+.services-container .book-btn {
+  margin-top: 2rem;
+  display: block;
+}
+
 .services-container .book-btn a {
   text-decoration: none;
+
   font-weight: 500;
   color: #000114;
   font-size: 1.8rem;
@@ -631,12 +670,18 @@ footer {
   margin-top: 2rem;
 }
 
+.services-container .book-btn a:hover {
+  background-color: #6758e5;
+  transition: all ease-in 0.2s;
+}
+
 .services-container .book-btn img {
   padding-left: 1%;
 }
 .services-container .tabs {
   display: flex;
   width: 70%;
+  height: 100%;
   justify-content: space-between;
   margin-bottom: 8rem;
 }
@@ -669,6 +714,12 @@ footer {
   }
 }
 
+@media (max-width: 800px) {
+  .services-container .tabs a {
+    font-size: 2.3rem;
+  }
+}
+
 .contacts {
   width: 100%;
   height: 100%;
@@ -676,7 +727,7 @@ footer {
 
 .contacts .contacts-container {
   margin-left: 10%;
-  max-width: 100%;
+  width: 100%;
 }
 .contacts-container h1 {
   font-family: "KumbhSans", fallback sans-serif;
@@ -705,6 +756,7 @@ footer {
 
 .contact-form {
   flex: 1 0 70%;
+  max-width: 100%;
 }
 
 .contact-form label {
@@ -715,14 +767,33 @@ footer {
   color: #d4d2f5;
   opacity: 0.6;
   display: block;
+  position: absolute;
+  top: 5px;
+  left: 0;
 }
 
 .contact-form input {
   border: none;
   width: 100%;
+  height: 40px;
   background: transparent;
   border-bottom: 1px solid #3a384e;
   margin-bottom: 5.7rem;
+
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 103.9%;
+  color: #f9f9ff;
+}
+
+input:focus {
+  outline: none;
+}
+
+input:focus ~ label {
+  top: -14px;
+  -moz-transition: all ease-in 0.2s;
+  transition: all ease-in 0.2s;
 }
 
 .contact-form .form-group-name {
@@ -732,21 +803,38 @@ footer {
 .form-group-name .name-group {
   flex: 1 0 48%;
   margin-right: 2rem;
+
+  position: relative;
 }
 
 .form-group-name .email-group {
   flex: 1 0 48%;
+  position: relative;
+}
+.form-group-message {
+  position: relative;
 }
 
 .contact-form button {
   font-style: normal;
   font-weight: 500;
   font-size: 1.8rem;
+  width: 100%;
   line-height: 103.9%;
   color: #000114;
   border: none;
-  padding: 1.8rem 28.9rem;
+  padding: 1.8rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #6758e5;
+  transition: all ease-in 0.2s;
+  color: #ffffff;
 }
 
 .contact-form a {
@@ -785,6 +873,7 @@ footer {
   line-height: 137.3%;
   color: #e1dff3;
   text-decoration: none;
+  display: block;
 }
 
 .contact-social a {
@@ -803,7 +892,7 @@ footer {
 @media (max-width: 1200px) {
   .contacts-wrapper {
     flex-direction: column;
-    width: 80%;
+    width: 85%;
   }
 
   .contacts-container h1 {
@@ -815,12 +904,38 @@ footer {
     width: 70%;
   }
   .contact-form {
+    width: 100%;
     margin-bottom: 2rem;
   }
 
   .contact-location {
     margin-top: 2rem;
     margin-left: 0;
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 800px) {
+  .form-group-name {
+    flex-direction: column;
+  }
+  .contacts-container h1 {
+    font-size: 6rem;
+  }
+
+  .contacts-container p {
+    font-style: 2.4rem;
+    width: 80%;
+  }
+  .form-group-name .name-group {
+    margin-right: 0;
+  }
+
+  .contact-location .location-to h2 {
+    font-size: 2rem;
+  }
+  .contact-location .location-to a {
+    font-size: 2rem;
   }
 }
 
@@ -936,7 +1051,7 @@ footer {
 
   .give-container {
     height: 100%;
-    padding: 10rem 4rem;
+    padding: 10rem 10%;
   }
   .store-wrapper {
     height: 100%;
