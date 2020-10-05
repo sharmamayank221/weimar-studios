@@ -136,12 +136,11 @@ nav {
   position: absolute;
   top: 0;
   left: 0;
-  min-height: 100%;
+  height: 100vh;
   width: 100%;
 }
 
 nav .nav-container {
-  width: 100%;
   height: 10vh;
   font-family: "KumbhSans", fallback sans-serif;
   display: flex;
@@ -183,10 +182,8 @@ nav ul li a:hover {
 
 .burger {
   width: 2.5rem;
-  height: 100%;
-  position: absolute;
-  right: 2rem;
-  top: 3.1rem;
+  margin-right: 1.5rem;
+  margin-bottom: 0.36rem;
   display: none;
   z-index: 2;
   cursor: pointer;
@@ -200,11 +197,11 @@ nav ul li a:hover {
 }
 @media (max-width: 1200px) {
   .nav .homepage-banner h1 {
-    font-size: 7.4rem;
+    font-size: 6rem;
   }
 }
 
-@media (max-width: 870px) {
+@media (max-width: 900px) {
   nav .main-links a {
     font-size: 1.3rem;
   }
@@ -218,7 +215,7 @@ nav ul li a:hover {
     position: absolute;
     right: 0px;
     background: #010114;
-    height: 90vh;
+    height: 100vh;
     top: 0vh;
     display: flex;
     flex-direction: column;
@@ -238,6 +235,31 @@ nav ul li a:hover {
   .nav-active {
     transform: translateX(0);
     transition: transform 0.2s ease-in-out;
+  }
+
+  .nav {
+    height: 60vh;
+  }
+  .nav .homepage-banner h1 {
+    font-size: 5.2rem;
+    line-height: 5.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav .homepage-banner h1 {
+    font-size: 4.5rem;
+    line-height: 4.9rem;
+  }
+  .nav .alternate-links {
+    display: none;
+  }
+}
+
+@media (max-width: 490px) {
+  .nav .homepage-banner h1 {
+    font-size: 3.2rem;
+    line-height: 4rem;
   }
 }
 
@@ -360,7 +382,7 @@ footer {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .footer-links .footer-links-navigation a {
     font-size: 1.2rem;
   }
@@ -490,8 +512,8 @@ footer {
 
 .carosel-images {
   width: 100%;
-  height: 100vh;
-
+  height: 100%;
+  margin: 20% 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -606,12 +628,14 @@ footer {
 
 @media (max-width: 520px) {
   .learn-more-top p {
-    font-size: 2.1rem;
+    font-size: 1.9rem;
     width: 85%;
+    line-height: 3.4rem;
   }
   .learn-more-bottom p {
     font-size: 1.6rem;
     width: 85%;
+    line-height: 3.4rem;
   }
   .learn-more-btn a {
     font-size: 1.4rem;
@@ -742,16 +766,16 @@ footer {
 
 @media (max-width: 600px) {
   .book p {
-    font-size: 2.8rem;
-    line-height: 45px;
+    font-size: 2.4rem;
+    line-height: 3rem;
     margin-bottom: 1rem;
   }
   .book a {
     font-size: 1.5rem;
   }
   .Explore p {
-    font-size: 2.8rem;
-    line-height: 45px;
+    font-size: 2.4rem;
+    line-height: 3rem;
     margin-bottom: 1rem;
   }
 }
@@ -869,22 +893,29 @@ footer {
   }
 }
 
-@media (max-width: 567px) {
+@media (max-width: 573px) {
+  .services-container .tabs a {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 450px) {
   .services-container h1 {
     font-size: 4rem;
   }
 
-  .services-container .tabs a {
-    font-size: 1.6rem;
-  }
   .services-container p {
     font-size: 2rem;
     width: 80%;
+    line-height: 3.2rem;
     padding-bottom: 5rem;
   }
 
   .services-container .book-btn a {
     font-size: 1.4rem;
+  }
+  .services-container .tabs a {
+    font-size: 1.3rem;
   }
 }
 
@@ -1108,13 +1139,14 @@ input:focus ~ label {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 520px) {
   .contacts-container h1 {
     font-size: 4.5rem;
   }
   .contacts-container p {
     font-size: 2rem;
     width: 90%;
+    line-height: 3.2rem;
     padding-bottom: 6rem;
   }
   .contact-location .location-to h2 {
@@ -1129,13 +1161,16 @@ input:focus ~ label {
   .contact-form button {
     font-size: 1.5rem;
   }
+  .contact-form label {
+    font-size: 1.1rem;
+  }
 }
 
 .give {
   width: 100%;
   height: 100%;
   display: flex;
-  margin-top: 20rem;
+  margin-top: 10rem;
 }
 
 .give .give-wrapper {
@@ -1392,6 +1427,11 @@ input:focus ~ label {
   padding-bottom: 3rem;
 }
 
+.give-section-wrapper .give-section-bottom-p p {
+  font-size: 2.4rem;
+  color: #e1dff3;
+}
+
 .give-section-wrapper .give-btn {
   display: flex;
   align-items: center;
@@ -1408,6 +1448,31 @@ input:focus ~ label {
   font-size: 3.5rem;
   text-decoration: none;
   color: #ffffff;
+}
+
+/* give page media-queries */
+@media (max-width: 1200px) {
+  .give-section-wrapper h1 {
+    font-size: 8rem;
+  }
+  .give-section-wrapper p {
+    font-size: 2.8rem;
+  }
+  .give-section-wrapper .give-section-bottom-p p {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .give-section-wrapper h1 {
+    font-size: 5rem;
+  }
+  .give-section-wrapper p {
+    font-size: 2.4rem;
+  }
+  .give-section-wrapper .give-section-bottom-p p {
+    font-size: 1.7rem;
+  }
 }
 
 /* about-page */
@@ -1586,7 +1651,8 @@ input:focus ~ label {
 
 .about-paragraph {
   width: 80%;
-  margin: 10rem auto;
+  margin: 0 auto;
+  margin-top: 10rem;
 }
 
 .about-paragraph p {
@@ -1596,4 +1662,73 @@ input:focus ~ label {
   line-height: 35px;
   color: #ffffff;
   width: 75%;
+}
+
+/* responsive about page */
+
+@media (max-width: 800px) {
+  .about-page-container h1 {
+    font-size: 8rem;
+  }
+  .about-para-top p {
+    font-size: 2.8rem;
+  }
+  .about-para-bottom p {
+    font-size: 2rem;
+  }
+  .about-more-top p {
+    font-size: 2.8rem;
+    width: 80%;
+  }
+  .about-more-bottom p {
+    font-size: 2rem;
+    width: 80%;
+  }
+  .about-images-container h3 {
+    font-size: 1.4rem;
+    width: 75%;
+  }
+
+  .about-paragraph p {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 675px) {
+  .about-images .about-images-container {
+    flex-direction: column;
+  }
+
+  .about-images-left {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 499px) {
+  .about-page-container h1 {
+    font-size: 5rem;
+  }
+  .about-para-top p {
+    font-size: 2.4rem;
+  }
+  .about-para-bottom p {
+    font-size: 1.7rem;
+    padding-bottom: 10rem;
+  }
+  .about-more-top p {
+    font-size: 2.4rem;
+    width: 85%;
+  }
+  .about-more-bottom p {
+    font-size: 1.7rem;
+    width: 85%;
+  }
+  .about-images-container h3 {
+    font-size: 1.2rem;
+    width: 85%;
+  }
+  .about-paragraph p {
+    font-size: 1.8rem;
+    width: 90%;
+  }
 }
