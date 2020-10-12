@@ -1,10 +1,6 @@
-const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
-
-tl.to(".nav", { y: "-150%", duration: 2, delay: 2 });
-
 const navSlide = () => {
   const burger = document.querySelector(".burger");
-  const nav = document.querySelector("nav .main-links");
+  const nav = document.querySelector(".navbar .main-links");
   const navLinks = document.querySelectorAll(".main-links li");
   burger.addEventListener("click", () => {
     nav.classList.toggle("nav-active");
@@ -21,4 +17,5 @@ const navSlide = () => {
     });
   });
 };
+
 navSlide();

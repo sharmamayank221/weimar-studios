@@ -7,7 +7,8 @@
       content="width=device-width, initial-scale=1.0 minimum-scale=1.0"
     />
     <link rel="stylesheet" href="css/fonts.css" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="css/style.css" />
     <title>Home</title>
   </head>
@@ -18,7 +19,10 @@
         <div class="home-hero">
           <img src="images/home-hero-banner.svg" alt="hero" />
 
-          <nav>
+          <div class="navbar">
+            <div class="navbar-wrapper">
+
+           
             <div class="nav-container">
               <div class="logo-wrapper">
                 <a href="/"> <img src="images/logo-footer.svg" alt="logo" /></a>
@@ -37,21 +41,26 @@
               </div>
             </div>
          
-          </nav>
+          </div>
         </div>
-        <div class="nav">
+        </div>
+        <!-- <div class="nav">
+          <div class="nav-wrapper">
           <div class="nav-container">
             <div class="logo-wrapper">
               <a href="/"> <img src="images/logo.svg" alt="logo" /></a>
             </div>
             <ul class="alternate-links">
-              <li><a href="about.html">About</a></li>
-              <li><a href="Store.html">Store</a></li>
-              <li><a href="Booking.html">Booking</a></li>
-              <li><a href="Give.html">Give</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#store-wrapper">Store</a></li>
+              <li><a href="#booking">Booking</a></li>
+              <li><a href="#give">Give</a></li>
+              <li><a href="#contacts">Contact Us</a></li>
             </ul>
-          </div>
+
+            </div>
+       
+         
           <div class="homepage-banner">
             <h1>Amet minim mollit non deserunt</h1>
             <div class="music-streaming">
@@ -60,9 +69,10 @@
             </div>
           </div>
         </div>
+      </div> -->
       </header>
       <section class="hero-img-vid"></section>
-      <section class="about">
+      <section id="about">
         <div class="about-us">
           <h1>About us</h1>
           <div class="about-us-para-big">
@@ -86,15 +96,24 @@
 
       <section class="carosel" >
   <div class="carosel-images">
-    <div class="carosel-1">
+    <div class="carosel-items">
       <img src="images/about-hero-1.svg" alt="">
     </div>
-    <div class="carosel-2">
+    <div class="carosel-items">
       <img src="images/about-hero-0.svg" alt="">
     </div>
-    <div class="carosel-3">
+    <div class="carosel-items">
       <img src="images/about-hero-2.svg" alt="">
     </div>
+ 
+    <div class="carosel-items">
+      <img src="images/about-hero-1.svg" alt="">
+    </div>
+ 
+    <div class="carosel-items">
+      <img src="images/about-hero-0.svg" alt="">
+    </div>
+ 
   </div>
       </section>
       <section class="learnmore">
@@ -118,7 +137,7 @@
       
       </section>
 
-      <section class="call-to-action">
+      <section id="booking">
         <div class="actions">
 
       
@@ -156,7 +175,7 @@
         </div>
       </section>
 
-      <section class="contacts">
+      <section id="contacts">
         <div class="contacts-container">
           <h1>Contacts</h1>
           <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint</p>
@@ -207,7 +226,7 @@
         </div>
       </div>
       </section>
-      <section class="give">
+      <section id="give">
         <div class="give-wrapper">
        
           <div class="give-container">
@@ -220,7 +239,7 @@
           </div>  
         </div>
         
-        <div class="store-wrapper">
+        <div id="store-wrapper">
           <h1>Store</h1>
           <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. </p>
           <div class="store-btn">
@@ -269,7 +288,10 @@
         <a href="#"><img src="images/icon-chevron-top.svg" alt=""></a>
       </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"> </script>
+  <script src="js/slick.js"></script>
     <script src="js/app.js"></script>
+  
   </body>
 </html>
