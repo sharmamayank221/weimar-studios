@@ -61,6 +61,18 @@ header {
   transform: translateY(0%);
   transition: transform 1s ease-in-out 1s;
 }
+@keyframes nav-animate {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+.animate {
+  animation: nav-animate 1s ease-in-out;
+}
 
 .homeSlide {
   transform: translateY(-40%);
@@ -620,7 +632,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow-x: scroll;
+  /* overflow-x: scroll; */
 }
 
 /* .carosel-images::-webkit-scrollbar {
